@@ -1,0 +1,22 @@
+//
+//  TODOLISTApp.swift
+//  TODOLIST
+//
+//  Created by zubair ahmed on 19/05/25.
+//
+
+import SwiftUI
+
+@main
+struct TODOLISTApp: App {
+    @StateObject var listViewModel:ListViewModel=ListViewModel()
+    var body: some Scene {
+        WindowGroup {
+            NavigationView {
+                ListView()
+            }
+            .environmentObject(listViewModel)
+           
+        }
+    }
+}
